@@ -31,9 +31,9 @@ def quickstart project_id:, metric_label:
                                           labels: { "my_key" => metric_label }
 
   resource = Google::Api::MonitoredResource.new type: "gce_instance"
-  resource.labels['project_id'] = project_id
-  resource.labels['instance_id'] = '1234567890123456789'
-  resource.labels['zone'] = 'us-central1-f'
+  resource.labels["project_id"] = project_id
+  resource.labels["instance_id"] = "1234567890123456789"
+  resource.labels["zone"] = "us-central1-f"
 
   point = Google::Cloud::Monitoring::V3::Point.new
   point.value = Google::Cloud::Monitoring::V3::TypedValue.new double_value: 3.14
